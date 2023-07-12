@@ -1,0 +1,61 @@
+.logframe {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background-color: #b4d6dd;
+    overflow: hidden;
+  }
+  
+  
+
+  .quiz {
+    color: darkblue;
+    font-family: "Pacifico", cursive;
+    font-weight: bold;
+    text-align: center;
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: darkblue;
+    animation: zoomIn 1s ease-in-out;
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+  
+ 
+  
+  .regform{
+    /* height: 520px;
+    width: 400px; */
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 80%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+.logform{
+    background-color: rgba(255,255,255,0.13);
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255,255,255,0.1);
+    box-shadow: 0 0 40px rgba(8,7,16,0.6);
+    padding: 50px 35px;
+}
+
+
+

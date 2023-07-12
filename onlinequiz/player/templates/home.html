@@ -1,0 +1,43 @@
+{% extends 'index.html' %}
+{% block nav %}
+<h1 class="quiz" style="font-size:150px;">Play Now</h1> <br>  
+
+<div class="col-lg-8 col-xl-12 text-black text-center " style="border-radius: 25px; height: 400px;width:800px; background-color:rgb(222, 245, 245);margin-left:345px">
+  <div class="row p-5 text-center " style="display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;">
+  
+    <div class="card   " style="width: 14rem;border-radius:25px;background-color:rgb(124, 124, 236)">
+      
+      <div class="card-body">
+        <h2 class="quiz card-title text-light">Science</h2>
+       
+        <a href="{%url 'Slevel'%}" class=" text-light stretched-link" >Click here</a>
+      </div>
+      
+    
+    </div>
+  </div>
+  <div class="row   text-center" style="display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;">
+    <div class="card ml-3 text-center text-light  " style="width: 14rem;border-radius:25px;background-color:rgb(124, 124, 236)">
+
+      <div class="card-body">
+        <h2 class="card-title  quiz">History</h2>
+       
+        <a href="{%url 'Hlevel'%}"class="stretched-link text-light">Click here</a>
+      </div>
+      
+    
+    </div>
+   
+    
+   
+  </div>
+      
+</div>
+
+{%endblock nav%}

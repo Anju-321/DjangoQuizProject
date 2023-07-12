@@ -1,0 +1,45 @@
+{% extends 'index.html' %}
+{% block nav %}
+      
+    <div class="container ">
+        
+      <div class="card-columns" style="padding: 10px; margin: 20px;">
+          <div class="card" align="centre " style="width: 65rem; border:1px black solid;background-color:rgb(176, 220, 244)">
+
+              <div class="card-body">
+                  <h5 class="card-title">Score: {{score}}</h5>
+   
+                
+                  <p class="card-text">Correct answers: {{correct}}</p>
+                  <p class="card-text">Incorrect answers: {{wrong}}</p>
+                  <p class="card-text">Total questions: {{total}}</p>
+                  <a class="btn btn-primary text-center" href="{% url 'Home' %}">Go to Quiz</a><br><br>
+                
+                    <h5 class="card-title">Correct answer</h5>
+                    {% for q  in question%}
+                   
+                      <p>{{q.question}}</p>
+                      <p>
+                        {{q.answer}}
+                    </p>
+                    
+                    {% endfor %}     
+                  
+                    
+                    <h5>All the best for next quiz!</h5>
+                </div>
+
+                 
+                  
+              </div>
+              
+          </div>
+      </div>
+   
+    </div>
+    
+
+
+ 
+
+  {%endblock nav%}
