@@ -3,8 +3,9 @@ from .views import *
 
 
 
-urlpatterns = [
-   
+
+urlpatterns = [   
+               
   path('home',quizhome,name='Home'),
   path('scilevel',sci_level,name='Slevel'),
   path('histlevel',hist_level,name='Hlevel'),
@@ -15,8 +16,6 @@ urlpatterns = [
   path('history1',historyl1, name='h1'),
   path('history2',historyl2, name='h2'),
   path('history3',historyl3, name='h3'),
-  path('score/<int:score>/', display_score, name='score'),
-  
-  
+  path('score/<int:score>/', display_score, name='score'),  
 
 ]

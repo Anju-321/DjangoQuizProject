@@ -1,25 +1,26 @@
 from django.shortcuts import render,redirect
 from question.models import Question
 from django.contrib import messages
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
 
-# decorator
 
 
 
-
+@login_required
 def quizhome(request):
     return render(request,'home.html')
 
-
+@login_required
 def sci_level(request):
     return render(request,'sci_level.html')
 
+@login_required
 def hist_level(request):
     return render(request,'histlevel.html')
-
+@login_required
 def sl1(request):
     return render(request,'scil1.html')
 
@@ -245,7 +246,7 @@ def historyl3(request):
             'questions':questions
         }
         return render(request,'scil1.html',context)  
-
+@login_required
 def display_score(request,score,questions):
   
     context = {'score': score}

@@ -4,18 +4,14 @@ from django.views.generic import View,CreateView,FormView
 from .forms import RegForm,Logform
 
 from django.contrib import messages
-from django.contrib.auth import authenticate,logout
+from django.contrib.auth import authenticate,logout,login
 from django.urls import reverse_lazy
 
 
 
 
 # Create your views here.
-def login(request):
-    return render(request,'log.html')
 
-def register(request):
-    return render(request,'register.html')
 
 #view for registration
 class Regview(CreateView):
@@ -34,6 +30,8 @@ class LogView(FormView):
             pswd=formdata.cleaned_data.get("password")
             user_data=authenticate(request,username=user_name,password=pswd)
             if user_data:
+                login(request,user_data)
+                messages.success(request,"Login Successfully")
                 return redirect("Home")
             else:
                 return render(request,'log.html',{'form':formdata})
